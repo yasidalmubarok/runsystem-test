@@ -47,8 +47,8 @@ Server akan berjalan di `http://localhost:8080`
   "message": "User created successfully",
   "data": {
     "id": 1,
-    "name": "John Doe",
-    "hobbies": ["reading", "gaming", "coding"]
+    "name": "Yasid Al Mubarok",
+    "hobbies": "swimming"
   }
 }
 ```
@@ -63,8 +63,8 @@ Server akan berjalan di `http://localhost:8080`
   "message": "User retrieved successfully",
   "data": {
     "id": 1,
-    "name": "John Doe",
-    "hobbies": ["reading", "gaming", "coding"]
+    "name": "Yasid Al Mubarok",
+    "hobbies": "swimming"
   }
 }
 ```
