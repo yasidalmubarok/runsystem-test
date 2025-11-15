@@ -8,3 +8,63 @@ Bagi saya hobi itu sebagai escape untuk melepaskan penat, hobi saya itu berenang
 
 ## Tantangan - tantangan pada saat mengerjakan technical test
 Untuk tantangan pada saat mengerjakan test ini ada beberapa, seperti jaringan internet atau WiFi sering kali tiba tiba mati atau lemot, masalah pada device yang mana ternyata harus install Mingw 64 padahal saya rasa sudah di install software tersebut, dan kucing saya yang sering kali mengganggu saya dalam mengerjakan test ini.
+
+## Cara Menjalankan
+
+### 1. Install Dependencies
+```bash
+go mod tidy
+```
+
+### 2. Setup Environment
+Buat file `.env`:
+```env
+PORT=8080
+DB_PATH=storage/database.db
+```
+
+### 3. Jalankan Aplikasi
+```bash
+go run cmd/main.go
+```
+
+Server akan berjalan di `http://localhost:8080`
+### 1. Create User
+**POST** `/users`
+
+**Request Body:**
+```json
+{
+  "name": "Yasid Al Mubarok",
+  "hobbies": "swimming"
+}
+```
+
+**Success Response (201):**
+```json
+{
+  "status": 201,
+  "message": "User created successfully",
+  "data": {
+    "id": 1,
+    "name": "John Doe",
+    "hobbies": ["reading", "gaming", "coding"]
+  }
+}
+```
+
+### 2. Get User by ID
+**GET** `/users/:id`
+
+**Success Response (200):**
+```json
+{
+  "status": 200,
+  "message": "User retrieved successfully",
+  "data": {
+    "id": 1,
+    "name": "John Doe",
+    "hobbies": ["reading", "gaming", "coding"]
+  }
+}
+```
