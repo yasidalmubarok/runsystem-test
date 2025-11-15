@@ -23,7 +23,7 @@ func NewUserHandler(userService service.UserService) *UserHandler {
 func (uh *UserHandler) CreateUser(ctx *gin.Context) {
 	payLoad := dto.UserRequest{}
 	if err := ctx.ShouldBindJSON(&payLoad); err != nil {
-		errBind := helper.NewUnprocessableEntityError(err.Error())
+		errBind := helper.NewUnprocessableEntityError("Invalid request")
 		response := helper.ApiResponse(errBind.Status(), errBind.Message(), "error", nil)
 		ctx.JSON(errBind.Status(), response)
 		return
