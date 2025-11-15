@@ -1,1 +1,4 @@
 # runsystem-test
+
+## Penjelasan singkat
+Test ini menggunakan bahasa Go dan menggunakan database SQLite. Dalam test tersebut ada 2 endpoint, yaitu ```/users``` dengan method ```POST``` dan ```/users/:id``` dengan method ```GET```. Endpoint ```/users``` dengan method ```POST``` digunakan untuk membuat data user dengan bidang ```ID```, ```Nama```, dan ```Hobi```. Dalam endpoint ini ada validasi yang diberikan seperti ```ID``` dengan ```nama``` tertentu jika sudah terbuat akan menerima error ```409``` atau ```conflict error```, jika body json ada yang kosong maka akan menerima error ```422``` atau ```unprocessableentity```. Endpoint ```/users/:id``` dengan method ```GET``` digunakan untuk melihat data user sesuai id yang ingin dilihat. Dalam endpoint ini ada validasi yang diberikan, seperti jika ```ID``` yang dicari tidak ada maka akan menerima error ```404``` atau ```Not Found```.
